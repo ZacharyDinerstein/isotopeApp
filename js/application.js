@@ -10,13 +10,12 @@ $( document ).ready(function(){
 	runToughLoveApp();
 
 
-
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
 	function runToughLoveApp(){
-
+		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.pannel);
+		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.pannel);
 	}
-
 
 
 	//***** HELPER FUNCTIONS *****//

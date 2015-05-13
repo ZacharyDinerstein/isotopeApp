@@ -80,48 +80,10 @@
         <div class="container">
             <div class="row">
                <div class="col-sm-4">
-                    <div class="panel-section">
-                        <div class="col-xs-12 find-btn-container">
-                            <button type="submit" class="btn btn-default find-button">Lixin Fan</button>
-                        </div>
-                        <div class="col-xs-12 find-btn-container">
-                            <button type="submit" class="btn btn-default find-button">La Frances Hui</button>
-                        </div>
-                        <div class="col-xs-12 find-btn-container">
-                            <button type="submit" class="btn btn-default find-button">Chi-hui Yang</button>
-                        </div>
-                    </div>
+                    <div id="panel-section" class="panel-section"></div>
                </div>
                <div class="col-sm-8">
-                    <div class="films-section">
-                        <div class="film-container-container">
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="films-section"></div>
                </div>
             </div>
         </div>
@@ -150,12 +112,26 @@
 
 
     <!--***** Handlebars Templates *****-->
-    <script id="select-btn-template" type="text/x-handlebars-template">
-
+    <script id="panel-section-template" type="text/x-handlebars-template">
+        {{#each .}}
+            <div class="col-xs-12 find-btn-container">
+                <button type="submit" class="btn btn-default find-button">{{this.name}}</button>
+            </div>
+        {{/each}}
     </script>
 
-    <script id="organizations-section-template" type="text/x-handlebars-template">
-    
+    <script id="films-section-template" type="text/x-handlebars-template">
+        <div class="film-container-container">
+            {{#each .}}
+                {{#each this.reccomendedFilms}}
+                    <div class="film-container">
+                        <div class="film-poster-container">
+                            <img src="{{img}}">
+                        </div>
+                    </div>
+                {{/each}}
+            {{/each}}
+        </div>
     </script>
 
     <!--***** JAVASCRIPT LINKS *****-->
@@ -177,6 +153,9 @@
     <!-- Handlebars Core JS -->
     <script type="text/javascript" src="js/handlebars-v3.0.0.js"></script>
     
+    <!-- JSON data -->
+    <script type="text/javascript" src="js/data.js"></script>
+
     <!-- Tough Love App JS -->
     <script type="text/javascript" src="js/application.js"></script>
 </body>
