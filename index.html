@@ -83,35 +83,7 @@
                     <div id="panel-section" class="panel-section"></div>
                </div>
                <div class="col-sm-8">
-                    <div class="films-section">
-                        <div class="film-container-container">
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                            <div class="film-container">
-                                <div class="film-poster-container">
-                                    <img src="http://www.pbs.org/pov/i/lasttrainhome/manufactured-landscapes-120.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="films-section"></div>
                </div>
             </div>
         </div>
@@ -148,8 +120,18 @@
         {{/each}}
     </script>
 
-    <script id="organizations-section-template" type="text/x-handlebars-template">
-    
+    <script id="films-section-template" type="text/x-handlebars-template">
+        <div class="film-container-container">
+            {{#each .}}
+                {{#each this.reccomendedFilms}}
+                    <div class="film-container">
+                        <div class="film-poster-container">
+                            <img src="{{img}}">
+                        </div>
+                    </div>
+                {{/each}}
+            {{/each}}
+        </div>
     </script>
 
     <!--***** JAVASCRIPT LINKS *****-->
