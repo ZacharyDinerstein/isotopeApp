@@ -1,0 +1,18 @@
+/***** NAVBAR *****/
+
+.navbar-default {
+	background: $primary-white;
+}
+
+.navbar-brand {
+	padding: 10.5px;
+	&:first-of-type {
+		margin-right: 10px;
+	}
+	img {
+		width: 5em;
+	}
+
+}
+
+

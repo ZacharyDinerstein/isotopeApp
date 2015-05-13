@@ -1,0 +1,37 @@
+
+/***** INTRO SECTION *****/
+
+.intro-section {
+	padding: 0px;
+    text-align: center;
+    color: $off-white;
+    background-size: cover;
+    position: relative;
+	background-color: rgba(0,0,0, 0.5);
+	&:after {
+		content: "";
+		background: url(../img/parents-1900x1299.jpg) no-repeat center center;
+		background-size: 157%;
+	}
+	h3 {
+		max-width: none;
+	}
+	.intro-message {
+		img {
+			width: 430px;
+		}
+		.intro-divider {
+			margin-bottom: 50px;
+		}
+		.loading-text {
+			max-width: 100%;
+			margin-top: 0px;
+		}
+		h2 {
+			max-width: 100%;
+			letter-spacing: .02em;
+		}
+	}
+}
+
+

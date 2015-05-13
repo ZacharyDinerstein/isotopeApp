@@ -1,0 +1,22 @@
+/****** HELPER CLASSES ******/
+
+.invisible {
+	display: none;
+}
+
+.hidden-text {
+	display: none;
+}
+
+.elem-disabled {
+	opacity: .3;
+	&:hover {
+		background: inherit;
+	}
+}
+
+.serif-text {
+	font-family: $serif-text;
+	font-size: $mobile-medium-text;
+  	font-weight: 400;
+}

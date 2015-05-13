@@ -1,0 +1,28 @@
+
+/***** DATA SECTION *****/
+
+
+
+#monthstiladoption {
+	margin-bottom: 0px;
+}
+
+.child-pop-container .paragraph-heading {
+	margin-top: 0px;
+}
+
+.paragraph-heading {
+	margin-bottom: .5em;
+	font-size: $mobile-medium-text;
+	margin-top: 2em;
+  	position: relative;
+  	/*line-height: 1.15em;*/
+  	&:before {
+		content: "";
+		width: 7px;
+		background: $primary-red;
+		position: absolute;
+		height: 100%;
+		transform: translateX(-22px);
+	}
+}

@@ -1,0 +1,82 @@
+
+/****** SITE-WIDE STYLES ******/
+
+
+body {
+	font-size: $body-text-size;
+}
+
+a {
+	color: $primary-red;
+	&:visited, &:active, &:focus {
+		color: $primary-red;
+		text-decoration: none;
+	}
+	&:hover {
+		color: $light-red;
+		text-decoration: none;
+	}
+	&.more-info {
+		display: block;
+	}
+}
+
+select {
+	&.form-control {
+		color: $primary-white;
+		background-color: $primary-red;
+		border-color: $primary-red-border;
+		outline: 0;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		min-width: 18em;
+		font-size: 24px;
+	}
+}
+
+.content-section-b{
+	background-color: $primary-white;
+}
+
+.content-section-1 { 
+	.section-heading-spacer {
+		margin-bottom: 0px;
+	}
+}
+
+.section-heading {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: $medium-header;
+	letter-spacing: .04em;
+}
+
+.section-heading-spacer {
+	border-top: 3px solid $medium-gray;
+	margin-bottom: 22px;
+	width: 217px;
+}
+
+.section-sub-heading {
+	margin-top: 0px;
+}
+
+.lead {
+	margin-bottom: 1em;
+}
+
+.paralax-bg-img:after {
+	/* Allow background image to paralax scroll */
+	background-attachment: fixed;
+	
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+}
+

@@ -1,0 +1,63 @@
+
+/***** ORGNAIZATIONS SECTION *****/
+
+.state-name {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: $large-header;
+}
+
+#state-info-container {
+	h2.section-bottom-message {
+		margin-bottom: 22px;
+	}
+	.section-bottom-message {
+		font-size: $mobile-medium-text;
+		color: gray;
+		letter-spacing: .01em;
+	}
+}
+
+.no-results-message-container {
+	color: gray;
+	margin-bottom: 22px;
+	font-size: $mobile-medium-text;
+	p {
+		margin-bottom: 22px;
+	}
+}
+
+.org-container {
+	margin-bottom: 2px;
+	.org {
+		position: relative;
+		top: 9px;
+		z-index: 1;
+		color: $primary-black;
+		display: inline-block;
+		margin-bottom: 10px;
+  		font-size: $mobile-medium-text;
+		margin-top: 0px;
+	  	position: relative;
+	}
+	span {
+		&.spacer {
+			margin-right: 6px;
+		}
+		&.miles {
+			font-size: $aside-text;
+			color: gray;
+			letter-spacing: 1px;
+			white-space: nowrap;
+		}
+	}
+}
+
+.contacts-container {
+	margin-bottom: 10px;
+	font-size: $small-text;
+	a {
+		margin-right: 10px;
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,47 @@
+
+/***** BUTTONS *****/
+
+
+.text-btn-container {
+	margin-top: 10px;
+}
+
+.btn-default, .btn-default:focus {
+	color: $primary-white;
+	background-color: $primary-red;
+	border-color: $primary-red-border;
+	font-size: 1.2em;
+	outline: 0;
+}
+
+.btn-default {
+	&:hover, &:active {
+		color: $primary-white;
+		background-color: $light-red;
+		border-color: $light-red-border;
+		outline: 0;
+	}
+	&.active {
+		color: $primary-white;
+		background-color: $active-elem;
+		border-color: $active-elem-border;
+		outline: 0;
+	}
+}
+
+.btn-default {
+	&.elem-disabled, &.elem-disabled:hover, &.elem-disabled:active, &.elem-disabled:focus {
+		color: $primary-white;
+		background-color: $light-red;
+		border-color: $light-red-border;
+		font-size: 1.2em;
+		outline: 0;
+		cursor: auto;
+	}
+}
+
+.btn {
+	&.active.focus, &.active:focus, &.focus, &:active.focus, &:active:focus, &:focus {
+		outline: 0;
+	}
+}

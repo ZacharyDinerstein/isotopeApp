@@ -1,0 +1,16 @@
+/****** ABOUT SECTION ******/
+
+
+.about-section {
+	h2 {
+		font-size: $large-header;
+		margin: 0 auto 25px;
+		max-width: 100%;
+	}
+	.section-heading {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-size: $medium-header;
+		letter-spacing: .04em;
+	}
+}
