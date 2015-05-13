@@ -1,0 +1,13 @@
+.film-container-container {
+	margin: 0 auto;
+	max-width: 668px;
+
+	.film-container {
+		display: inline-block;
+		margin: 15px;
+		img {
+			height: 281px;
+			width: 190px;
+		}
+	}
+}

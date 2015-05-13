@@ -151,6 +151,16 @@ a.tag {
   .navbar-brand img {
     width: 5em; }
 
+.film-container-container {
+  margin: 0 auto;
+  max-width: 668px; }
+  .film-container-container .film-container {
+    display: inline-block;
+    margin: 15px; }
+    .film-container-container .film-container img {
+      height: 281px;
+      width: 190px; }
+
 /***** INTRO SECTION *****/
 .intro-section {
   padding: 0px;
@@ -161,7 +171,7 @@ a.tag {
   background-color: rgba(0, 0, 0, 0.5); }
   .intro-section:after {
     content: "";
-    background: url(../img/parents-1900x1299.jpg) no-repeat center center;
+    background: url(http://placekitten.com/g/1900/1300) no-repeat center center;
     background-size: 157%; }
   .intro-section h3 {
     max-width: none; }
@@ -326,6 +336,9 @@ select.form-control {
 
 .section-sub-heading {
   margin-top: 0px; }
+
+.sub-heading {
+  font-size: 24px; }
 
 .lead {
   margin-bottom: 1em; }
