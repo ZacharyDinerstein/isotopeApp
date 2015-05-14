@@ -174,7 +174,7 @@ a.tag {
   background-color: rgba(0, 0, 0, 0.5); }
   .intro-section:after {
     content: "";
-    background: url(http://placekitten.com/g/1900/1300) no-repeat center center;
+    /*background: url(http://placekitten.com/g/1900/1300) no-repeat center center;*/
     background-size: 157%; }
   .intro-section h3 {
     max-width: none; }

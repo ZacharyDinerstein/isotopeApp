@@ -1,25 +1,22 @@
 $( document ).ready(function(){
 	'use strict';
 
-	//***** GLOBAL VARIABLES *****//
-	
-	var panelMems = chosenFilms.panel;
-
-
-
 	//***** INITIALIZE *****//
 
-	runToughLoveApp();
+	//runToughLoveApp();
+	$.ajax({
+		url: 'js/data.json'
+	}).done(runToughLoveApp);
 
 
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
-	function runToughLoveApp(){
-		renderHandlebarsTemplate('#select-btn-template', '#select-btn-container', chosenFilms.panel);
-		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
-		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
-		connectIsotope();
-		setupEventListeners();
+	function runToughLoveApp(panel){
+		renderHandlebarsTemplate('#select-btn-template', '#select-btn-container', panel);
+		renderHandlebarsTemplate('#panel-section-template', '#panel-section', panel);
+		renderHandlebarsTemplate('#films-section-template', '#films-section', panel);
+		connectIsotope(panel);
+		setupEventListeners(panel);
 	}
 
 
@@ -31,7 +28,7 @@ $( document ).ready(function(){
 		$(elemID).html(template(JSON));
 	}
 
-	function connectIsotope(){
+	function connectIsotope(panel){
 		var $container = $('.film-container-container');
 		// init
 		$container.isotope({
@@ -42,10 +39,10 @@ $( document ).ready(function(){
 			}
 		});
 
-		addIsotopeFunctionToElems($container);
+		addIsotopeFunctionToElems($container, panel);
 	}
 
-	function addIsotopeFunctionToElems($container){
+	function addIsotopeFunctionToElems($container, panelMems){
 		// Adds isotop functionality to buttons
 		$.each(panelMems, function(panelMem, contents){
 			$('.' + panelMem).on('click', function(){
@@ -64,14 +61,15 @@ $( document ).ready(function(){
 
 	//***** EVENT LISTENERS *****//
 
-	function setupEventListeners(){
+	function setupEventListeners(panel){
 		$('.film-container').on('click', function(){
 			var index = $(this).attr('data-array-index');
 			var panelMem = $(this).attr('data-panel-mem');
-			renderHandlebarsTemplate('#modal-template', '#modal-container', chosenFilms.panel[panelMem].recommendedFilms[index]);
+			renderHandlebarsTemplate('#modal-template', '#modal-container', panel[panelMem].recommendedFilms[index]);
 		});
 	}
 
+	// $(document.head).append('<link rel="stylesheet" type="text/css" href="css/jquery.remodal.css">');
 });
 
 
