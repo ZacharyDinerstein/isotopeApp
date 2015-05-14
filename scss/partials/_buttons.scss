@@ -45,3 +45,16 @@
 		outline: 0;
 	}
 }
+
+.find-btn-container {
+	position: relative;
+	margin-bottom: 20px;
+	button.find-button, button.find-button:active, button.find-button:hover, button.find-button:visited, button.find-button:focus {
+		font-size: 1.8em;
+		width: 100%;
+		white-space: normal;
+		text-align: left;
+		padding: 6px 28px;
+		max-width: 243px;
+	}
+}

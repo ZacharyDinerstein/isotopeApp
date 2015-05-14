@@ -15,6 +15,7 @@ $( document ).ready(function(){
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
 	function runToughLoveApp(){
+		renderHandlebarsTemplate('#select-btn-template', '#select-btn-container', chosenFilms.panel);
 		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
 		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
 		connectIsotope();
@@ -35,7 +36,9 @@ $( document ).ready(function(){
 		$container.isotope({
 			// options
 			itemSelector: '.film-container',
-			layoutMode: 'fitRows'
+			masonry: {
+				isFitWidth: true
+			}
 		});
 
 		addIsotopeFunctionToElems($container);
@@ -47,7 +50,15 @@ $( document ).ready(function(){
 				$container.isotope({ filter: '.' + panelMem });
 			});
 		});
+
+		// Allow data on screen to change when user selects a different panel mem from the select button.
+		$("#choose-panel-mem").change(function() {
+			var selectedPanelMem = $(this).val();
+			$container.isotope({ filter: '.' + selectedPanelMem });
+		});
 	}
+
+
 });
 
 

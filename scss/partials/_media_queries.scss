@@ -68,6 +68,12 @@
 	.section-sub-heading {
 		text-align: center;
 	}
+
+	.find-btn-container {
+		button.find-button, button.find-button:active, button.find-button:hover, button.find-button:visited, button.find-button:focus {
+			font-size: 1.3em;
+		}
+	}
 }
 
 
@@ -313,26 +319,5 @@
 
 	.content-section-b {
 		padding: 23px 0;
-	}
-}
-
-
-
-/****** MEDIA QUERIES (HEIGHT) ******/
-
-
-@media (max-height: 724px) {
-	.banner {
-		&:after {
-			background-position: center 60px;
-		}
-	}
-}
-
-@media (max-height: 561px) {
-	.banner {
-		&:after {
-			background-position: center -60px;
-		}
 	}
 }
