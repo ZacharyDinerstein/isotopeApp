@@ -115,7 +115,7 @@
     <script id="panel-section-template" type="text/x-handlebars-template">
         {{#each .}}
             <div class="col-xs-12 find-btn-container">
-                <button type="submit" class="btn btn-default find-button">{{this.name}}</button>
+                <button type="submit" class="btn btn-default find-button" data-panel-name="{{@key}}">{{this.name}}</button>
             </div>
         {{/each}}
     </script>
@@ -124,7 +124,7 @@
         <div class="film-container-container">
             {{#each .}}
                 {{#each this.recommendedFilms}}
-                    <div class="film-container">
+                    <div class="film-container {{../ccName}}">
                         <div class="film-poster-container">
                             <img src="{{img}}">
                         </div>
