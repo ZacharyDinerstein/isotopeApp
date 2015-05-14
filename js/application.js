@@ -69,7 +69,6 @@ $( document ).ready(function(){
 		});
 	}
 
-	// $(document.head).append('<link rel="stylesheet" type="text/css" href="css/jquery.remodal.css">');
 });
 
 
