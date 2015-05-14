@@ -57,17 +57,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="intro-message">
-                            <a data-remodal-target="modal">Call the modal with data-remodal-id="modal"</a>
                             <h1>Essential Docs About China</h1>
                             <h3 class="sub-heading">Last Train Home director Lixin Fan joins other filmmakers, film curators and writers in recommending more documentaries about China.</h3>
                             <hr class="intro-divider">
                             <div class="mobile-select-section visible-xs">
                                 <h2>Select a filmmaker to see their reccomendations</h2>
-                                <div id="select-btn-container">
-                                    <select id="choose-state" class="form-control">
-                                        <option>All Films</option>
-                                    </select>
-                                </div>
+                                <div id="select-btn-container"></div>
                             </div>
                         </div>
                     </div>
@@ -149,7 +144,7 @@
         <div class="film-container-container">
             {{#each .}}
                 {{#each this.recommendedFilms}}
-                    <div class="film-container {{../ccName}}">
+                    <div data-remodal-target="modal" class="film-container {{../ccName}}">
                         <div class="film-poster-container">
                             <img src="{{img}}">
                         </div>
