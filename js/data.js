@@ -1,5 +1,5 @@
 var chosenFilms = {
-	pannel: {
+	panel: {
 		lixinFan: {
 			name: "Lixin Fan",
 			ccName: "lixinFan",

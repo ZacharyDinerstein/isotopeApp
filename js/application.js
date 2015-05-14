@@ -2,6 +2,8 @@ $( document ).ready(function(){
 	'use strict';
 
 	//***** GLOBAL VARIABLES *****//
+	
+	var panelMems = chosenFilms.panel;
 
 
 
@@ -13,8 +15,9 @@ $( document ).ready(function(){
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
 	function runToughLoveApp(){
-		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.pannel);
-		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.pannel);
+		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
+		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
+		connectIsotope();
 	}
 
 
@@ -24,6 +27,26 @@ $( document ).ready(function(){
 		var source = $(templateID).html();
 		var template = Handlebars.compile(source);
 		$(elemID).html(template(JSON));
+	}
+
+	function connectIsotope(){
+		var $container = $('.film-container-container');
+		// init
+		$container.isotope({
+			// options
+			itemSelector: '.film-container',
+			layoutMode: 'fitRows'
+		});
+
+		addIsotopeFunctionToElems($container);
+	}
+
+	function addIsotopeFunctionToElems($container){
+		$.each(panelMems, function(panelMem, contents){
+			$('.' + panelMem).on('click', function(){
+				$container.isotope({ filter: '.' + panelMem });
+			});
+		});
 	}
 });
 

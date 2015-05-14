@@ -115,7 +115,7 @@
     <script id="panel-section-template" type="text/x-handlebars-template">
         {{#each .}}
             <div class="col-xs-12 find-btn-container">
-                <button type="submit" class="btn btn-default find-button" data-panel-name="{{@key}}">{{this.name}}</button>
+                <button type="submit" class="btn btn-default find-button {{@key}}" data-panel-name="{{@key}}">{{this.name}}</button>
             </div>
         {{/each}}
     </script>
@@ -155,6 +155,9 @@
     
     <!-- JSON data -->
     <script type="text/javascript" src="js/data.js"></script>
+
+    <!-- Isotope JS -->
+    <script type="text/javascript" src="js/isotope.js"></script>
 
     <!-- Tough Love App JS -->
     <script type="text/javascript" src="js/application.js"></script>
