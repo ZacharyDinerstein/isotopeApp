@@ -40,19 +40,7 @@
                 <a class="navbar-brand topnav" href="http://www.pbs.org/pov/toughlove/" target="_blank"><img src="img/povlogo_2.jpg"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<!--                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="about" href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="http://www.pbs.org/pov/toughlove/" target="_blank">Tough Love</a>
-                    </li>
-                    <li>
-                        <a href="http://www.pbs.org/pov/toughlove/parent-resource-guide-submission-form.php" target="_blank">Submit</a>
-                    </li>
-                </ul> -->
-            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -117,6 +105,14 @@
 
 
     <!--***** Handlebars Templates *****-->
+    <script id="select-btn-template" type="text/x-handlebars-template">
+        <select id="choose-state" class="form-control">
+            {{#each .}}
+                <option class="{{@key}}">{{this.name}}</option>
+            {{/each}}
+        </select>
+    </script>
+
     <script id="panel-section-template" type="text/x-handlebars-template">
         {{#each .}}
             <div class="col-xs-12 find-btn-container">

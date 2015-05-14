@@ -15,6 +15,7 @@ $( document ).ready(function(){
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
 	function runToughLoveApp(){
+		renderHandlebarsTemplate('#select-btn-template', '#select-btn-container', chosenFilms.panel);
 		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
 		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
 		connectIsotope();
