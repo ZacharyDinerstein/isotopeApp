@@ -23,9 +23,6 @@
 			font-size: 28px;
 		}
 	}
-	.film-container-container {
-		/*max-width: 439px;*/
-	}
 }
 
 
@@ -70,6 +67,12 @@
 
 	.section-sub-heading {
 		text-align: center;
+	}
+
+	.find-btn-container {
+		button.find-button, button.find-button:active, button.find-button:hover, button.find-button:visited, button.find-button:focus {
+			font-size: 1.3em;
+		}
 	}
 }
 

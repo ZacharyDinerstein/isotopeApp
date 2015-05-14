@@ -56,6 +56,17 @@
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
   outline: 0; }
 
+.find-btn-container {
+  position: relative;
+  margin-bottom: 20px; }
+  .find-btn-container button.find-button, .find-btn-container button.find-button:active, .find-btn-container button.find-button:hover, .find-btn-container button.find-button:visited, .find-btn-container button.find-button:focus {
+    font-size: 1.8em;
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    padding: 6px 28px;
+    max-width: 243px; }
+
 /***** TAGS CSS *****/
 .tags-container {
   margin-top: 28px; }
@@ -125,13 +136,6 @@ a.tag {
   .tag-search-container .checkbox-inline {
     margin-right: 10px;
     margin-left: 0px; }
-
-.find-btn-container {
-  position: relative;
-  margin-bottom: 20px; }
-  .find-btn-container button.find-button, .find-btn-container button.find-button:active, .find-btn-container button.find-button:hover, .find-btn-container button.find-button:visited, .find-btn-container button.find-button:focus {
-    font-size: 2.2em;
-    padding: 6px 48px; }
 
 /***** CSS LOADERS *****/
 .loader-inner.ball-pulse > div {
@@ -366,10 +370,7 @@ select.form-control {
     background-size: 157%; }
 
   .intro-message h2 {
-    font-size: 28px; }
-
-  .film-container-container {
-    /*max-width: 439px;*/ } }
+    font-size: 28px; } }
 /* 992px and smaller */
 @media (max-width: 991px) {
   .banner:after {
@@ -393,7 +394,10 @@ select.form-control {
     margin-bottom: 50px; }
 
   .section-sub-heading {
-    text-align: center; } }
+    text-align: center; }
+
+  .find-btn-container button.find-button, .find-btn-container button.find-button:active, .find-btn-container button.find-button:hover, .find-btn-container button.find-button:visited, .find-btn-container button.find-button:focus {
+    font-size: 1.3em; } }
 /* 768px and smaller */
 @media (max-width: 767px) {
   p, h2, h3 {
