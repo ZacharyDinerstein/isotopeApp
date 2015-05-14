@@ -106,9 +106,9 @@
 
     <!--***** Handlebars Templates *****-->
     <script id="select-btn-template" type="text/x-handlebars-template">
-        <select id="choose-state" class="form-control">
+        <select id="choose-panel-mem" class="form-control">
             {{#each .}}
-                <option class="{{@key}}">{{this.name}}</option>
+                <option value="{{@key}}">{{this.name}}</option>
             {{/each}}
         </select>
     </script>

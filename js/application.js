@@ -50,7 +50,15 @@ $( document ).ready(function(){
 				$container.isotope({ filter: '.' + panelMem });
 			});
 		});
+
+		// Allow data on screen to change when user selects a different panel mem from the select button.
+		$("#choose-panel-mem").change(function() {
+			var selectedPanelMem = $(this).val();
+			$container.isotope({ filter: '.' + selectedPanelMem });
+		});
 	}
+
+
 });
 
 
