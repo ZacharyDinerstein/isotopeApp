@@ -35,7 +35,9 @@ $( document ).ready(function(){
 		$container.isotope({
 			// options
 			itemSelector: '.film-container',
-			layoutMode: 'fitRows'
+			masonry: {
+				isFitWidth: true
+			}
 		});
 
 		addIsotopeFunctionToElems($container);
