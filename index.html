@@ -83,7 +83,7 @@
                     <div id="panel-section" class="panel-section"></div>
                </div>
                <div class="col-sm-8">
-                    <div class="films-section"></div>
+                    <div id="films-section"></div>
                </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
     <script id="films-section-template" type="text/x-handlebars-template">
         <div class="film-container-container">
             {{#each .}}
-                {{#each this.reccomendedFilms}}
+                {{#each this.recommendedFilms}}
                     <div class="film-container">
                         <div class="film-poster-container">
                             <img src="{{img}}">
