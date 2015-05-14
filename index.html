@@ -109,16 +109,7 @@
     </div>
 
     <!-- Modal Box HTML -->
-    <div class="remodal" data-remodal-id="modal">
-        <h1>Remodal</h1>
-        <p>
-          Flat, responsive, lightweight, fast, easy customizable modal window plugin
-          with declarative state notation and hash tracking.
-        </p>
-        <br>
-        <a class="remodal-cancel" href="#">Cancel</a>
-        <a class="remodal-confirm" href="#">OK</a>
-    </div>
+    <div id="modal-container" class="remodal" data-remodal-id="modal"></div>
 
 
 
@@ -144,7 +135,7 @@
         <div class="film-container-container">
             {{#each .}}
                 {{#each this.recommendedFilms}}
-                    <div data-remodal-target="modal" class="film-container {{../ccName}}">
+                    <div data-remodal-target="modal" data-array-index="{{@index}}" data-panel-mem="{{../ccName}}" class="film-container {{../ccName}}">
                         <div class="film-poster-container">
                             <img src="{{img}}">
                         </div>
@@ -154,6 +145,12 @@
         </div>
     </script>
 
+    <script id="modal-template" type="text/x-handlebars-template">
+        <h1>{{title}}</h1>
+        <p>"{{blurb}}"</p>
+        <br>
+        <a class="remodal-cancel" href="#">Close</a>
+    </script>
 
 
     <!--***** JAVASCRIPT LINKS *****-->

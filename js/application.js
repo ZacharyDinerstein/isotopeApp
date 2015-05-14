@@ -19,6 +19,7 @@ $( document ).ready(function(){
 		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
 		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
 		connectIsotope();
+		setupEventListeners();
 	}
 
 
@@ -59,6 +60,17 @@ $( document ).ready(function(){
 		});
 	}
 
+
+
+	//***** EVENT LISTENERS *****//
+
+	function setupEventListeners(){
+		$('.film-container').on('click', function(){
+			var index = $(this).attr('data-array-index');
+			var panelMem = $(this).attr('data-panel-mem');
+			renderHandlebarsTemplate('#modal-template', '#modal-container', chosenFilms.panel[panelMem].recommendedFilms[index]);
+		});
+	}
 
 });
 
