@@ -187,7 +187,8 @@ a.tag {
     margin-top: 0px; }
   .intro-section .intro-message h2 {
     max-width: 100%;
-    letter-spacing: .02em; }
+    letter-spacing: .02em;
+    margin-bottom: 20px; }
 
 /***** ORGNAIZATIONS SECTION *****/
 .state-name {
