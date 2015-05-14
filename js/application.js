@@ -45,13 +45,14 @@ $( document ).ready(function(){
 	}
 
 	function addIsotopeFunctionToElems($container){
+		// Adds isotop functionality to buttons
 		$.each(panelMems, function(panelMem, contents){
 			$('.' + panelMem).on('click', function(){
 				$container.isotope({ filter: '.' + panelMem });
 			});
 		});
 
-		// Allow data on screen to change when user selects a different panel mem from the select button.
+		// Adds isotop functionality to select menu
 		$("#choose-panel-mem").change(function() {
 			var selectedPanelMem = $(this).val();
 			$container.isotope({ filter: '.' + selectedPanelMem });
