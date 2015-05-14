@@ -2,6 +2,8 @@ $( document ).ready(function(){
 	'use strict';
 
 	//***** GLOBAL VARIABLES *****//
+	
+	var panelMems = chosenFilms.panel;
 
 
 
@@ -13,10 +15,9 @@ $( document ).ready(function(){
 	//***** NAVIGATIONAL FUNCTIONS *****//
 
 	function runToughLoveApp(){
-		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.pannel);
-		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.pannel);
+		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.panel);
+		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.panel);
 		connectIsotope();
-		setupEventListeners();
 	}
 
 
@@ -32,37 +33,21 @@ $( document ).ready(function(){
 		var $container = $('.film-container-container');
 		// init
 		$container.isotope({
-		// options
-		itemSelector: '.film-container',
-		layoutMode: 'fitRows'
+			// options
+			itemSelector: '.film-container',
+			layoutMode: 'fitRows'
 		});
 
-		$('.lixinFan').on('click', function(){
-			var filterClass = $(this).attr('data-panel-name');
-			$container.isotope({ filter: '.' + filterClass });
-		});
-
-		$('.laFrancesHui').on('click', function(){
-			var filterClass = $(this).attr('data-panel-name');
-			$container.isotope({ filter: '.' + filterClass });
-		});
-
-		$('.chihuiYang').on('click', function(){
-			var filterClass = $(this).attr('data-panel-name');
-			$container.isotope({ filter: '.' + filterClass });
-		});
+		addIsotopeFunctionToElems($container);
 	}
 
-
-
-	//***** Event Listeners *****//
-
-	function setupEventListeners(){
-
+	function addIsotopeFunctionToElems($container){
+		$.each(panelMems, function(panelMem, contents){
+			$('.' + panelMem).on('click', function(){
+				$container.isotope({ filter: '.' + panelMem });
+			});
+		});
 	}
-
-
-
 });
 
 
