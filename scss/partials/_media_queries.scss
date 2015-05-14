@@ -93,15 +93,19 @@
 		line-height: 26px;
 	}
 
-	.intro-divider {
-		width: 400px;
-	}
-
+	.intro-section {
+		.intro-message {
+			.intro-divider {
+				width: 400px;
+				margin-bottom: 20px;
+			}
+		} 
+	} 
+	
 	.learn-more {
 		margin-bottom: 1em;
 		margin-top: 9.8px;
 	}
-
 
 	.intro-section:after {
 	  	background-position: center 12px;

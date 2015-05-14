@@ -187,7 +187,8 @@ a.tag {
     margin-top: 0px; }
   .intro-section .intro-message h2 {
     max-width: 100%;
-    letter-spacing: .02em; }
+    letter-spacing: .02em;
+    margin-bottom: 20px; }
 
 /***** ORGNAIZATIONS SECTION *****/
 .state-name {
@@ -410,8 +411,9 @@ select.form-control {
   .serif-text {
     line-height: 26px; }
 
-  .intro-divider {
-    width: 400px; }
+  .intro-section .intro-message .intro-divider {
+    width: 400px;
+    margin-bottom: 20px; }
 
   .learn-more {
     margin-bottom: 1em;

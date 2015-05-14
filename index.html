@@ -16,6 +16,9 @@
     <!-- Loaders CSS -->
     <link href="css/loaders.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Remodal CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.remodal.css">
+
     <!-- Tough Love App CSS -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -26,85 +29,101 @@
 
 <body class="content-section-a">
 
-    <!-- navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="http://www.pbs.org/pov/toughlove/" target="_blank"><img src="img/povlogo_2.jpg"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <div class="remodal-bg">
 
-    <!-- header -->
-    <div class="intro-section paralax-bg-img">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Essential Docs About China</h1>
-                        <h2 class="sub-heading">Last Train Home director Lixin Fan joins other filmmakers, film curators and writers in recommending more documentaries about China and by Chinese filmmakers.</h2>
-                        <hr class="intro-divider">
-                        <div id="select-btn-container" class="visible-xs">
-                            <select id="choose-state" class="form-control">
-                                <option>All Films</option>
-                            </select>
+        <!-- navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand topnav" href="http://www.pbs.org/pov/toughlove/" target="_blank"><img src="img/povlogo_2.jpg"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- header -->
+        <div class="intro-section paralax-bg-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+                            <h1>Essential Docs About China</h1>
+                            <h3 class="sub-heading">Last Train Home director Lixin Fan joins other filmmakers, film curators and writers in recommending more documentaries about China.</h3>
+                            <hr class="intro-divider">
+                            <div class="mobile-select-section visible-xs">
+                                <h2>Select a filmmaker to see their reccomendations</h2>
+                                <div id="select-btn-container"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- /.container -->
         </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.intro-section -->
+        <!-- /.intro-section -->
 
-    <!-- about section -->
-    <div id="about" class="about-section content-section-b">
-        <div class="container">
-            <div class="row">
-               <div class="col-sm-4 hidden-xs">
-                    <div id="panel-section" class="panel-section"></div>
-               </div>
-               <div class="col-sm-8">
-                    <div id="films-section"></div>
-               </div>
-            </div>
-        </div>
-    </div>
-    <!-- /. about section -->
-
-    <!-- footer section -->
-    <footer class="footer-section content-section-a">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-10 text-left footer-text-container">
-                    <span class="copyright">POV is a production of <a href="http://www.amdoc.org/index.php" target="_blank">American Documentary, Inc.</a>Copyright &copy; 1995–2015 American Documentary, Inc. | <a href="http://www.pbs.org/pov" target="_blank">pbs.org/pov</a></span>
-                </div>
-                <div class="col-xs-12 col-md-2">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://www.facebook.com/ToughLoveTheDocumentary" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/toughlovedoc" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="http://www.pbs.org/pov/toughlove" target="_blank"><i class="fa fa-globe"></i></a></li>
-                    </ul>
+        <!-- about section -->
+        <div id="about" class="about-section content-section-b">
+            <div class="container">
+                <div class="row">
+                   <div class="col-sm-4 hidden-xs">
+                        <div id="panel-section" class="panel-section"></div>
+                   </div>
+                   <div class="col-sm-8">
+                        <div id="films-section"></div>
+                   </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- /. footer section -->
+        <!-- /. about section -->
+
+        <!-- footer section -->
+        <footer class="footer-section content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 text-left footer-text-container">
+                        <span class="copyright">POV is a production of <a href="http://www.amdoc.org/index.php" target="_blank">American Documentary, Inc.</a>Copyright &copy; 1995–2015 American Documentary, Inc. | <a href="http://www.pbs.org/pov" target="_blank">pbs.org/pov</a></span>
+                    </div>
+                    <div class="col-xs-12 col-md-2">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://www.facebook.com/ToughLoveTheDocumentary" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/toughlovedoc" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://www.pbs.org/pov/toughlove" target="_blank"><i class="fa fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /. footer section -->
+    
+    </div>
+
+    <!-- Modal Box HTML -->
+    <div class="remodal" data-remodal-id="modal">
+        <h1>Remodal</h1>
+        <p>
+          Flat, responsive, lightweight, fast, easy customizable modal window plugin
+          with declarative state notation and hash tracking.
+        </p>
+        <br>
+        <a class="remodal-cancel" href="#">Cancel</a>
+        <a class="remodal-confirm" href="#">OK</a>
+    </div>
 
 
 
     <!--***** Handlebars Templates *****-->
+
     <script id="select-btn-template" type="text/x-handlebars-template">
         <select id="choose-panel-mem" class="form-control">
             {{#each .}}
@@ -125,7 +144,7 @@
         <div class="film-container-container">
             {{#each .}}
                 {{#each this.recommendedFilms}}
-                    <div class="film-container {{../ccName}}">
+                    <div data-remodal-target="modal" class="film-container {{../ccName}}">
                         <div class="film-poster-container">
                             <img src="{{img}}">
                         </div>
@@ -134,6 +153,8 @@
             {{/each}}
         </div>
     </script>
+
+
 
     <!--***** JAVASCRIPT LINKS *****-->
 
@@ -160,7 +181,21 @@
     <!-- Isotope JS -->
     <script type="text/javascript" src="js/isotope.js"></script>
 
+    <!-- Remodal Options -->
+    <script>
+        window.remodalGlobals = {
+            defaults: {
+                hashTracking: false
+            }
+        };
+    </script>
+
     <!-- Tough Love App JS -->
     <script type="text/javascript" src="js/application.js"></script>
+    
+    <!-- Remodal JS -->
+    <script type="text/javascript" src="js/jquery.remodal.min.js"></script>
+
+
 </body>
 </html>
