@@ -13,9 +13,6 @@
     <!-- Bootstrap Landing Page Template CSS -->
     <link href="css/bootstrap-template-landing-page.css" rel="stylesheet">
 
-    <!-- Loaders CSS -->
-    <link href="css/loaders.min.css" rel="stylesheet" type="text/css">
-
     <!-- Remodal CSS -->
     <link rel="stylesheet" type="text/css" href="css/jquery.remodal.css">
 
@@ -109,16 +106,7 @@
     </div>
 
     <!-- Modal Box HTML -->
-    <div class="remodal" data-remodal-id="modal">
-        <h1>Remodal</h1>
-        <p>
-          Flat, responsive, lightweight, fast, easy customizable modal window plugin
-          with declarative state notation and hash tracking.
-        </p>
-        <br>
-        <a class="remodal-cancel" href="#">Cancel</a>
-        <a class="remodal-confirm" href="#">OK</a>
-    </div>
+    <div id="modal-container" class="remodal" data-remodal-id="modal"></div>
 
 
 
@@ -144,7 +132,7 @@
         <div class="film-container-container">
             {{#each .}}
                 {{#each this.recommendedFilms}}
-                    <div data-remodal-target="modal" class="film-container {{../ccName}}">
+                    <div data-remodal-target="modal" data-array-index="{{@index}}" data-panel-mem="{{../ccName}}" class="film-container {{../ccName}}">
                         <div class="film-poster-container">
                             <img src="{{img}}">
                         </div>
@@ -154,16 +142,18 @@
         </div>
     </script>
 
+    <script id="modal-template" type="text/x-handlebars-template">
+        <h1>{{title}}</h1>
+        <p>"{{blurb}}"</p>
+        <br>
+        <a class="remodal-cancel" href="#">Close</a>
+    </script>
 
 
     <!--***** JAVASCRIPT LINKS *****-->
 
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Analytics Script -->
     <script type="text/javascript">
@@ -174,9 +164,6 @@
 
     <!-- Handlebars Core JS -->
     <script type="text/javascript" src="js/handlebars-v3.0.0.js"></script>
-    
-    <!-- JSON data -->
-    <script type="text/javascript" src="js/data.js"></script>
 
     <!-- Isotope JS -->
     <script type="text/javascript" src="js/isotope.js"></script>
