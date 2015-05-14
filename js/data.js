@@ -2,6 +2,7 @@ var chosenFilms = {
 	pannel: {
 		lixinFan: {
 			name: "Lixin Fan",
+			ccName: "lixinFan",
 			img: "http://www.pbs.org/pov/i/lasttrainhome/lixin-fan-85.jpg",
 			bio: "Lixin Fan is a Canada-based documentary film director for EyeSteelFilm and is the director of the award-winning feature-length documentary <strong>Last Train Home</strong>, which had its U.S. broadcast premiere on POV in 2011. Find out more about the film at <a href='http://www.pbs.org/pov/lasttrainhome'>http://www.pbs.org/pov/lasttrainhome</a>.",
 			recommendedFilms: [
@@ -49,6 +50,7 @@ var chosenFilms = {
 		},
 		laFrancesHui: {
 			name: "La Frances Hui",
+			ccName: "laFrancesHui",
 			img: "http://www.pbs.org/pov/i/lasttrainhome/la-frances-hui-85.jpg",
 			bio: "La Frances Hui is film curator of Asia Society in New York. She has curated major filmmaker retrospectives and series featuring cinemas of China, Thailand, Iran, among others. A seasoned interviewer, she has led on-stage conversations with filmmakers including Jia Zhangke, Ang Lee, Apichatpong Weerasethakul and John Woo.",
 			recommendedFilms: [
@@ -96,6 +98,7 @@ var chosenFilms = {
 		},
 		chihuiYang: {
 			name: "Chi-hui Yang",
+			ccName: "chihuiYang",
 			img: "http://www.pbs.org/pov/i/lasttrainhome/chi-hui-yang-85.jpg",
 			bio: "Chi-hui Yang is a film programmer, lecturer and writer based in New York. As a guest curator, Yang has presented film and video series at film festivals and events internationally, including the MOMA Documentary Fortnight and the Robert Flaherty Film Seminar ('The Age of Migration'). From 2000-2010, he was the director and programmer of the San Francisco International Asian American Film Festival and is currently the programmer of Cinema Asian America, a new on-demand service offered by Comcast and a visiting scholar at New York University’s Asian/Pacific/American Institute.",
 			recommendedFilms: [
