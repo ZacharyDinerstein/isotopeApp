@@ -15,6 +15,8 @@ $( document ).ready(function(){
 	function runToughLoveApp(){
 		renderHandlebarsTemplate('#panel-section-template', '#panel-section', chosenFilms.pannel);
 		renderHandlebarsTemplate('#films-section-template', '#films-section', chosenFilms.pannel);
+		connectIsotope();
+		setupEventListeners();
 	}
 
 
@@ -25,6 +27,42 @@ $( document ).ready(function(){
 		var template = Handlebars.compile(source);
 		$(elemID).html(template(JSON));
 	}
+
+	function connectIsotope(){
+		var $container = $('.film-container-container');
+		// init
+		$container.isotope({
+		// options
+		itemSelector: '.film-container',
+		layoutMode: 'fitRows'
+		});
+
+		$('.lixinFan').on('click', function(){
+			var filterClass = $(this).attr('data-panel-name');
+			$container.isotope({ filter: '.' + filterClass });
+		});
+
+		$('.laFrancesHui').on('click', function(){
+			var filterClass = $(this).attr('data-panel-name');
+			$container.isotope({ filter: '.' + filterClass });
+		});
+
+		$('.chihuiYang').on('click', function(){
+			var filterClass = $(this).attr('data-panel-name');
+			$container.isotope({ filter: '.' + filterClass });
+		});
+	}
+
+
+
+	//***** Event Listeners *****//
+
+	function setupEventListeners(){
+
+	}
+
+
+
 });
 
 
