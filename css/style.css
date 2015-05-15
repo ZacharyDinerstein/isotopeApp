@@ -415,6 +415,31 @@ a.tag {
     .film-container-container .film-container img {
       height: 281px;
       width: 190px; }
+    .film-container-container .film-container .film-poster-container {
+      cursor: pointer;
+      /*transition: all .5s ease;*/ }
+      .film-container-container .film-container .film-poster-container .review-container {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+        border: 3px solid #ED1C24;
+        box-sizing: border-box;
+        color: black;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        padding: 10px 15px 10px 15px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%; }
+        .film-container-container .film-container .film-poster-container .review-container:hover {
+          opacity: 1; }
+        .film-container-container .film-container .film-poster-container .review-container .read-more {
+          margin-top: 16px;
+          text-align: right; }
 
 /***** INTRO SECTION *****/
 .intro-section {
@@ -426,7 +451,7 @@ a.tag {
   background-color: rgba(0, 0, 0, 0.5); }
   .intro-section:after {
     content: "";
-    /*background: url(http://placekitten.com/g/1900/1300) no-repeat center center;*/
+    background: url(../img/yangtze_river.jpg) no-repeat center center;
     background-size: 157%; }
   .intro-section h3 {
     max-width: none; }
