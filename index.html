@@ -13,9 +13,6 @@
     <!-- Bootstrap Landing Page Template CSS -->
     <link href="css/bootstrap-template-landing-page.css" rel="stylesheet">
 
-    <!-- Remodal CSS -->
-    <link rel="stylesheet" type="text/css" href="css/jquery.remodal.css">
-
     <!-- Tough Love App CSS -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -56,7 +53,7 @@
                         <div class="intro-message">
                             <h1>Essential Docs About China</h1>
                             <h3 class="sub-heading">Last Train Home director Lixin Fan joins other filmmakers, film curators and writers in recommending more documentaries about China.</h3>
-                            <hr class="intro-divider">
+                            <hr class="divider">
                             <div class="mobile-select-section visible-xs">
                                 <h2>Select a filmmaker to see their reccomendations</h2>
                                 <div id="select-btn-container"></div>
@@ -106,7 +103,8 @@
     </div>
 
     <!-- Modal Box HTML -->
-    <div id="modal-container" class="remodal" data-remodal-id="modal"></div>
+
+    <div id="modal-container" class="remodal container" data-remodal-id="modal"></div>
 
 
 
@@ -142,11 +140,34 @@
         </div>
     </script>
 
+
     <script id="modal-template" type="text/x-handlebars-template">
-        <h1>{{title}}</h1>
-        <p>"{{blurb}}"</p>
-        <br>
-        <a class="remodal-cancel" href="#">Close</a>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row img-containing-row">
+                    <div class="col-sm-4 col-xs-5">
+                        <img src={{img}}>
+                    </div>
+                    <div class="col-sm-8 col-xs-7">
+                        <h1 class="film-title">{{title}}</h1>
+                        <p class="micro-text director">Directed by {{director}}</p>
+                        <p class="micro-text release-date">{{releaseDate}}</p>
+                        <div class="blurb-container">
+                            <p class="blurb">"{{blurb}}"</p>
+                        </div>
+                        <p class="micro-text panel-mem">{{../name}}</p>
+                    </div>
+                </div>
+                <div class="above-divider"></div>
+                <hr class="divider">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="remodal-close"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </script>
 
 

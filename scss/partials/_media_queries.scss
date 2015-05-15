@@ -54,7 +54,7 @@
 		h2 {
 			font-size: 24px;
 		}
-		.intro-divider {
+		.divider {
 			margin-bottom: 40px;
 		}
 	}
@@ -95,7 +95,7 @@
 
 	.intro-section {
 		.intro-message {
-			.intro-divider {
+			.divider {
 				width: 400px;
 				margin-bottom: 20px;
 			}
@@ -160,7 +160,7 @@
 	.intro-message {
 		padding-top: 23px;
 		padding-bottom: 23px;
-		.intro-divider {
+		.divider {
 			margin-bottom: 20px;
 		}
 		.state-org-container {
@@ -201,12 +201,24 @@
 	  		top: -13px;
 	  	}
   	}
+	.remodal {
+		img {
+  			width: 100%;
+		}
+		.film-title {
+			font-size: 32px;
+		}
+	}
 }
 
 /* 480px and smaller */
 
 @media (max-width: 479px) {
-	.intro-divider {
+	.micro-text {
+		font-size: $smaller-text;
+	}
+
+	.divider {
 		width: 100%;
 	}
 
@@ -323,5 +335,10 @@
 
 	.content-section-b {
 		padding: 23px 0;
+	}
+	.remodal {
+		.film-title {
+			font-size: 24px;
+		}
 	}
 }

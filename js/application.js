@@ -1,6 +1,13 @@
 $( document ).ready(function(){
 	'use strict';
 
+
+	//***** GLOBAL VARIABLES *****//
+
+	var winWidth;
+	var paraMoved;
+	var modalOpen;
+
 	//***** INITIALIZE *****//
 
 	//runToughLoveApp();
@@ -17,6 +24,7 @@ $( document ).ready(function(){
 		renderHandlebarsTemplate('#films-section-template', '#films-section', panel);
 		connectIsotope(panel);
 		setupEventListeners(panel);
+		rearrangeModalElems();
 	}
 
 
@@ -57,6 +65,30 @@ $( document ).ready(function(){
 		});
 	}
 
+	function rearrangeModalElems(){
+		winWidth = $(window).width();
+		if (winWidth < (641) ){
+			moveParaBelowRow();
+		} else {
+			moveParaIntoRow();
+		}
+	}
+
+
+	function moveParaBelowRow(){
+		var para = $(".blurb").detach();
+		$('.above-divider').html(para);
+		paraMoved = true;
+	}
+	
+	function moveParaIntoRow(){
+		if (paraMoved){
+			var para = $(".blurb").detach();
+			$('.blurb-container').html(para);
+			paraMoved = false;
+		}
+	}
+
 
 
 	//***** EVENT LISTENERS *****//
@@ -66,6 +98,15 @@ $( document ).ready(function(){
 			var index = $(this).attr('data-array-index');
 			var panelMem = $(this).attr('data-panel-mem');
 			renderHandlebarsTemplate('#modal-template', '#modal-container', panel[panelMem].recommendedFilms[index]);
+		});
+
+		// REFACTOR: Using jQuery to rearrange modal blurb when using a mobile-sized screen. Should use plain CSS // 
+		$(window).on("resize", function(){
+			rearrangeModalElems();
+		});
+
+		$(document).on('open', '.remodal', function () {
+			rearrangeModalElems();
 		});
 	}
 

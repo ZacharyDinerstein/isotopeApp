@@ -66,6 +66,12 @@ select {
 	font-size: 24px;
 }
 
+.micro-text {
+	font-size: $small-text;
+	color: gray;
+	letter-spacing: 1px;
+}
+
 .lead {
 	margin-bottom: 1em;
 }

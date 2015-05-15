@@ -145,7 +145,7 @@ body.remodal-is-active .remodal-overlay {
     box-sizing: border-box;
     width: 100%;
     min-height: 100%;
-    padding: 35px;
+    padding: 35px 35px 18.5px 35px;
 
     -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-out;
     -moz-transition: -moz-transform 0.2s ease-out, opacity 0.2s ease-out;
@@ -183,10 +183,10 @@ body.remodal-is-active .remodal {
 /* Close button */
 
 .remodal-close {
-    position: absolute;
+    /*position: absolute;
     top: 5px;
-    left: 5px;
-
+    left: 5px;*/
+    display: inline-block;
     width: 28px;
     height: 28px;
 
@@ -218,14 +218,14 @@ body.remodal-is-active .remodal {
     color: #3e5368;
 }
 
-.remodal-close:hover,
+/*.remodal-close:hover,
 .remodal-close:active {
     background: #3e5368;
-}
+}*/
 
 .remodal-close:hover.remodal-close:after,
 .remodal-close:active.remodal-close:after {
-    color: #f4f4f4;
+    color: $primary-red;
 }
 
 /* Dialog buttons */
@@ -291,6 +291,12 @@ body.remodal-is-active .remodal {
     }
 }
 
+@media only screen and (min-width: 992px) {
+    .remodal {
+        max-width: 866px;
+    }
+}
+
 /* IE8
    ========================================================================== */
 
@@ -317,5 +323,5 @@ body.remodal-is-active .remodal {
 
 .lt-ie9 .remodal-close:hover.remodal-close:after,
 .lt-ie9 .remodal-close:active.remodal-close:after {
-    color: #3e5368;
+    color: $primary-red;
 }

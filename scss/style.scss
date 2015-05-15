@@ -3,6 +3,9 @@
 /*Variables*/
 @import 'partials/variables';
 
+/*Libraries*/
+@import 'partials/jquery.remodal.scss';
+
 /*Helper Classes*/
 @import 'partials/helper';
 
@@ -18,6 +21,7 @@
 @import 'partials/orgs_section';
 @import 'partials/about';
 @import 'partials/footer';
+@import 'partials/modal_box';
 
 @import 'partials/main';
 
