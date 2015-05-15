@@ -231,6 +231,9 @@ body.remodal-is-active .remodal {
     margin: 20px auto;
     -webkit-border-radius: 6px;
     border-radius: 6px; } }
+@media only screen and (min-width: 992px) {
+  .remodal {
+    max-width: 866px; } }
 /* IE8
    ========================================================================== */
 .lt-ie9 .remodal-overlay {
@@ -546,10 +549,12 @@ footer {
 
 .remodal {
   text-align: left; }
-  .remodal .divider {
-    width: 90%; }
   .remodal img {
     width: 97%; }
+  .remodal .divider {
+    width: 90%; }
+  .remodal .film-title {
+    font-size: 34px; }
 
 /****** SITE-WIDE STYLES ******/
 body {
