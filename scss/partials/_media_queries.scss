@@ -201,11 +201,23 @@
 	  		top: -13px;
 	  	}
   	}
+	.remodal {
+		img {
+  			width: 100%;
+		}
+		.film-title {
+			font-size: 32px;
+		}
+	}
 }
 
 /* 480px and smaller */
 
 @media (max-width: 479px) {
+	.micro-text {
+		font-size: $smaller-text;
+	}
+
 	.divider {
 		width: 100%;
 	}
@@ -323,5 +335,10 @@
 
 	.content-section-b {
 		padding: 23px 0;
+	}
+	.remodal {
+		.film-title {
+			font-size: 24px;
+		}
 	}
 }

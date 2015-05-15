@@ -554,6 +554,7 @@ footer {
   .remodal .divider {
     width: 90%; }
   .remodal .film-title {
+    margin-top: 0px;
     font-size: 34px; }
 
 /****** SITE-WIDE STYLES ******/
@@ -606,10 +607,9 @@ select.form-control {
   font-size: 24px; }
 
 .micro-text {
-  font-size: 0.65em;
+  font-size: 1em;
   color: gray;
-  letter-spacing: 1px;
-  white-space: nowrap; }
+  letter-spacing: 1px; }
 
 .lead {
   margin-bottom: 1em; }
@@ -748,9 +748,17 @@ select.form-control {
     font-size: 0.75em;
     margin-bottom: 13px; }
     .tag .arrow {
-      top: -13px; } }
+      top: -13px; }
+
+  .remodal img {
+    width: 100%; }
+  .remodal .film-title {
+    font-size: 32px; } }
 /* 480px and smaller */
 @media (max-width: 479px) {
+  .micro-text {
+    font-size: 0.9em; }
+
   .divider {
     width: 100%; }
 
@@ -819,6 +827,9 @@ select.form-control {
     font-size: 14px; }
 
   .content-section-b {
-    padding: 23px 0; } }
+    padding: 23px 0; }
+
+  .remodal .film-title {
+    font-size: 24px; } }
 
 /*# sourceMappingURL=style.css.map */

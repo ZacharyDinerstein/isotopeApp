@@ -67,10 +67,9 @@ select {
 }
 
 .micro-text {
-	font-size: 0.65em;
+	font-size: $small-text;
 	color: gray;
 	letter-spacing: 1px;
-	white-space: nowrap;
 }
 
 .lead {
