@@ -218,10 +218,10 @@ body.remodal-is-active .remodal {
     color: #3e5368;
 }
 
-.remodal-close:hover,
+/*.remodal-close:hover,
 .remodal-close:active {
     background: #3e5368;
-}
+}*/
 
 .remodal-close:hover.remodal-close:after,
 .remodal-close:active.remodal-close:after {
@@ -317,5 +317,5 @@ body.remodal-is-active .remodal {
 
 .lt-ie9 .remodal-close:hover.remodal-close:after,
 .lt-ie9 .remodal-close:active.remodal-close:after {
-    color: #3e5368;
+    color: $primary-red;
 }
