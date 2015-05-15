@@ -1,15 +1,14 @@
-# toughLove
-Tough Love App used to help families learn about the child welfare system
+# Isotope App
 
-To find IDs for nested google spreadsheets, follow these instructions: http://stackoverflow.com/questions/24531351/retrieve-google-spreadsheet-worksheet-json
+Template for an Isotope App, which reveals modal boxes when isotope items are clicked.
 
 
-## Using SASS
-Open Terminal app and cd to this project folder
+## Technology
 
-  cd path/to/project
+- Isotope
+- Bootstrap
+- SCSS
+- Remodal
+- Handlebars
 
-tell SASS to watch for changes to scss file
-  
-  sass --watch scss/main.scss:css/main.css
 
