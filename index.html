@@ -132,6 +132,9 @@
                 {{#each this.recommendedFilms}}
                     <div data-remodal-target="modal" data-array-index="{{@index}}" data-panel-mem="{{../ccName}}" class="film-container {{../ccName}}">
                         <div class="film-poster-container">
+                            <div class="review-container">
+                                <p class="review">HEY</p>
+                            </div>
                             <img src="{{img}}">
                         </div>
                     </div>
@@ -139,7 +142,6 @@
             {{/each}}
         </div>
     </script>
-
 
     <script id="modal-template" type="text/x-handlebars-template">
         <div class="row">
