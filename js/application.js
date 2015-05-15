@@ -1,6 +1,13 @@
 $( document ).ready(function(){
 	'use strict';
 
+
+	//***** GLOBAL VARIABLES *****//
+
+	var winWidth;
+	var paraMoved;
+
+
 	//***** INITIALIZE *****//
 
 	//runToughLoveApp();
@@ -57,7 +64,29 @@ $( document ).ready(function(){
 		});
 	}
 
+	function rearrangeModalElems(){
+		winWidth = $(window).width();
+		if (winWidth < (641) ){
+			moveParaBelowRow();
+		} else {
+			moveParaIntoRow();
+		}
+	}
 
+
+	function moveParaBelowRow(){
+		var para = $(".blurb").detach();
+		$('.above-divider').html(para);
+		paraMoved = true;
+	}
+	
+	function moveParaIntoRow(){
+		if (paraMoved){
+			var para = $(".blurb").detach();
+			$('.blurb-container').html(para);
+			paraMoved = false;
+		}
+	}
 
 	//***** EVENT LISTENERS *****//
 
@@ -66,6 +95,10 @@ $( document ).ready(function(){
 			var index = $(this).attr('data-array-index');
 			var panelMem = $(this).attr('data-panel-mem');
 			renderHandlebarsTemplate('#modal-template', '#modal-container', panel[panelMem].recommendedFilms[index]);
+		});
+
+		$(window).on("resize", function(){
+			rearrangeModalElems();
 		});
 	}
 
