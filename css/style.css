@@ -180,7 +180,7 @@ a.tag {
     max-width: none; }
   .intro-section .intro-message img {
     width: 430px; }
-  .intro-section .intro-message .intro-divider {
+  .intro-section .intro-message .divider {
     margin-bottom: 50px; }
   .intro-section .intro-message .loading-text {
     max-width: 100%;
@@ -297,6 +297,10 @@ footer {
 
 .remodal {
   text-align: left; }
+  .remodal .divider {
+    width: 90%; }
+  .remodal img {
+    width: 97%; }
 
 /****** SITE-WIDE STYLES ******/
 body {
@@ -397,7 +401,7 @@ select.form-control {
     font-size: 4em; }
   .intro-message h2 {
     font-size: 24px; }
-  .intro-message .intro-divider {
+  .intro-message .divider {
     margin-bottom: 40px; }
 
   .state-org-container .state-container {
@@ -420,7 +424,7 @@ select.form-control {
   .serif-text {
     line-height: 26px; }
 
-  .intro-section .intro-message .intro-divider {
+  .intro-section .intro-message .divider {
     width: 400px;
     margin-bottom: 20px; }
 
@@ -465,7 +469,7 @@ select.form-control {
   .intro-message {
     padding-top: 23px;
     padding-bottom: 23px; }
-    .intro-message .intro-divider {
+    .intro-message .divider {
       margin-bottom: 20px; }
     .intro-message .state-org-container {
       margin-bottom: 20px; }
@@ -493,7 +497,7 @@ select.form-control {
       top: -13px; } }
 /* 480px and smaller */
 @media (max-width: 479px) {
-  .intro-divider {
+  .divider {
     width: 100%; }
 
   .intro-message h1 {
