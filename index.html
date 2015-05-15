@@ -106,7 +106,8 @@
     </div>
 
     <!-- Modal Box HTML -->
-    <div id="modal-container" class="remodal" data-remodal-id="modal"></div>
+
+    <div id="modal-container" class="remodal container" data-remodal-id="modal"></div>
 
 
 
@@ -142,14 +143,31 @@
         </div>
     </script>
 
+
     <script id="modal-template" type="text/x-handlebars-template">
-        <a class="remodal-close"></a>
-        <img src={{img}}>
-        <h1>{{title}}</h1>
-        <p class="micro-text director">Directed by {{director}}</p>
-        <p class="micro-text release-date">{{releaseDate}}</p>
-        <p class="blurb">"{{blurb}}"</p>
-        <p class="micro-text panel-mem">{{../name}}</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src={{img}}>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1>{{title}}</h1>
+                        <p class="micro-text director">Directed by {{director}}</p>
+                        <p class="micro-text release-date">{{releaseDate}}</p>
+                        <p class="blurb">"{{blurb}}"</p>
+                        <p class="micro-text panel-mem">{{../name}}</p>
+                    </div>
+                </div>
+                <hr class="intro-divider">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a class="remodal-close"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </script>
 
 

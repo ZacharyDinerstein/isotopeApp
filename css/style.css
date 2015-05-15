@@ -295,6 +295,9 @@ footer {
     .footer-section.content-section-b ul.social-buttons .title-text {
       display: none; }
 
+.remodal {
+  text-align: left; }
+
 /****** SITE-WIDE STYLES ******/
 body {
   font-size: 14px; }
