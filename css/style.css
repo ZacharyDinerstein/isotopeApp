@@ -552,10 +552,14 @@ footer {
   .remodal img {
     width: 97%; }
   .remodal .divider {
-    width: 90%; }
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px; }
   .remodal .film-title {
     margin-top: 0px;
     font-size: 34px; }
+  .remodal .img-containing-row {
+    margin-bottom: 30px; }
 
 /****** SITE-WIDE STYLES ******/
 body {

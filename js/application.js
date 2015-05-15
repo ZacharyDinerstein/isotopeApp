@@ -6,7 +6,7 @@ $( document ).ready(function(){
 
 	var winWidth;
 	var paraMoved;
-
+	var modalOpen;
 
 	//***** INITIALIZE *****//
 
@@ -24,6 +24,7 @@ $( document ).ready(function(){
 		renderHandlebarsTemplate('#films-section-template', '#films-section', panel);
 		connectIsotope(panel);
 		setupEventListeners(panel);
+		rearrangeModalElems();
 	}
 
 
@@ -88,6 +89,8 @@ $( document ).ready(function(){
 		}
 	}
 
+
+
 	//***** EVENT LISTENERS *****//
 
 	function setupEventListeners(panel){
@@ -98,6 +101,10 @@ $( document ).ready(function(){
 		});
 
 		$(window).on("resize", function(){
+			rearrangeModalElems();
+		});
+
+		$(document).on('open', '.remodal', function () {
 			rearrangeModalElems();
 		});
 	}
