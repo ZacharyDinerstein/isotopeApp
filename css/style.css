@@ -344,6 +344,12 @@ select.form-control {
 .sub-heading {
   font-size: 24px; }
 
+.micro-text {
+  font-size: 0.65em;
+  color: gray;
+  letter-spacing: 1px;
+  white-space: nowrap; }
+
 .lead {
   margin-bottom: 1em; }
 
