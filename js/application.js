@@ -100,6 +100,7 @@ $( document ).ready(function(){
 			renderHandlebarsTemplate('#modal-template', '#modal-container', panel[panelMem].recommendedFilms[index]);
 		});
 
+		// REFACTOR: Using jQuery to rearrange modal blurb when using a mobile-sized screen. Should use plain CSS // 
 		$(window).on("resize", function(){
 			rearrangeModalElems();
 		});
